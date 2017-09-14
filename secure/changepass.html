@@ -1,0 +1,25 @@
+<md-content id="changepass">
+	<div class="md-toolbar-tools" style='padding:0px;'>
+		<md-toolbar class="md-hue-2" style='padding:0px;' >
+			<label style='margin:auto;'>Change password</label>
+		</md-toolbar>
+	</div>
+	<div style='padding:30px;'>
+		  <md-input-container class="md-block">
+            <label>Actual password</label>
+            <input required md-no-asterisk type="password" name="password" ng-model="pass.actpass" id="actPassword" />
+          </md-input-container>
+
+          <md-input-container class="md-block">
+            <label ng-style="{'color': testmdp}">New password</label>
+            <input required md-no-asterisk ng-style="{'border-color': testmdp}" type="password" ng-model="pass.newPassword" name="password" id="newPassword" />
+          </md-input-container>
+
+          <md-input-container class="md-block">
+            <label ng-style="{'color': testmdp1}">Confirm your new password</label>
+            <input required md-no-asterisk ng-style="{'border-color': testmdp1}" type="password" ng-model="pass.confirmNewPassword" name="password" id="confirmNewPassword" ng-model="nmdp1"/>
+          </md-input-container>
+
+          <md-button type="submit" ng-click="changepassctrl()" id="login_rolechange" style='margin:auto; color:rgba(255,255,255,0.92); background-color:rgba(10,47,94,1);'>Submit</md-button>
+	</div>
+</md-content>

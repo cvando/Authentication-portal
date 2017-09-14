@@ -1,0 +1,37 @@
+
+md-dialog {
+  width:100%;
+  max-width: 400px;
+  position:fixed;
+  top:100px;
+}
+
+.form{
+  background-color: rgb(253,253,255);
+  width:100%;
+  margin:auto;
+  max-width:1024px;
+}
+.marg0{
+  margin:0px;   
+}
+.desc{
+  min-height:180px!important;
+}
+
+.navbar-blue{
+  background-color: rgb(63,81,181);
+  color : rgba(255,255,255,0.87);
+}
+
+a {
+  color : rgba(255,255,255,0.87);
+}
+
+li:hover{
+  background-color : rgba(63,81,181,0.2);
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}

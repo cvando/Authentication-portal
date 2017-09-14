@@ -1,0 +1,46 @@
+<div ng-controller="ticketsctrl" layout="column" ng-cloak>
+
+  <md-content layout-padding class="md-whiteframe-6dp form">
+    <form name="ticketForm">   
+	<div layout="row">
+      <md-input-container flex class="md-block">
+        <label>Title</label>
+        <input md-maxlength="55" required name="summary" ng-model="ticket.summary">
+        <div ng-messages="ticketForm.summary.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The title must be less than 55 characters long.</div>
+        </div>
+      </md-input-container>
+	  <md-input-container flex="20">
+			<label>Priority</label>
+			<md-select name="priority" ng-model="ticket.priority" required>
+				<md-option value="4">Low</md-option>
+				<md-option value="3">Medium</md-option>
+				<md-option value="1">Critical</md-option>
+			</md-select>
+	  </md-input-container>
+	</div>
+	  <md-input-container class="md-block">
+        <label>Description</label>
+		<textarea class="desc" flex required ng-model="ticket.description"></textarea>
+        <div ng-messages="ticketForm.description.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+		<div layout="row">
+		<md-input-container flex class="md-block">
+			<label>Email de l'admin</label>
+			<input ng-model="ticket.email" type="email">
+		</md-input-container>
+		<md-input-container flex class="md-block">
+			<label>CC</label>
+			<input name="cc" ng-model="ticket.cc">
+		</md-input-container>
+		</div>
+      <div>
+        <md-button class="md-raised md-primary" ng_click="save($event)" type="submit">Submit</md-button>
+      </div>
+    </form>
+  </md-content>
+
+</div>

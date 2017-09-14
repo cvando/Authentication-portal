@@ -1,0 +1,9 @@
+# Build the image
+
+docker build . -t tickets_pass:1.0
+
+
+
+# Run the container
+
+docker run --name tickets_pass -p 8081:8089 --restart=always -d tickets_pass:1.0

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="mytickets">
+    <head>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="icon" href="/favicon.ico" />
+
+        <!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/angular-material.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- SCRIPT_LIB -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js_lib/zxcvbn.js"></script>
+	<script src="js_lib/bcrypt.js"></script>
+        <script src="js_lib/angular.min.js"></script>
+        <script src="js_lib/angular-route.js"></script>
+        <script src="js_lib/angular-animate.min.js"></script>
+        <script src="js_lib/angular-aria.min.js"></script>
+        <script src="js_lib/angular-messages.min.js"></script>
+        <script src="js_lib/angular-material.min.js"></script>
+        <script src="js_lib/bootstrap.min.js"></script>
+		
+	<!-- SCRIPT -->
+	<script src="js/tickets_main.js"></script>
+	<script src="js/router.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/tickets.js"></script>
+
+    </head>
+
+    <body ng-controller="mainController">
+		<div ng-controller="navctl">
+			<md-toolbar class="md-hue-2">
+				<div class="md-toolbar-tools">
+					<img src="images/LOGO.png" style='max-width:200px'> 
+					<span flex></span>
+					<md-button layout="row" ng_click="modal()" aria-label="More" style="min-width: 0px;">
+						<md-icon class="material-icons ">account_box</md-icon>
+						<span hide-xs>Password</span>
+					</md-button>
+					<md-button layout="row" id="logout"  ng_click="logout()" aria-label="More" style="min-width: 0px;">
+						<md-icon class="material-icons ">exit_to_app</md-icon>
+						<span hide-xs>Logout</span>
+					</md-button>
+				</div>
+			</md-toolbar>
+		</div>	
+		<div ng-view class="main"></div>
+	</body>
+</html>

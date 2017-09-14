@@ -1,0 +1,24 @@
+<md-content ng-controller="loginctrl" id="mainlog" class="md-whiteframe-6dp" layout-padding style='min-width:300px; max-width:500px; margin:auto; margin-top:100px; background-color:white; md-whiteframe-4dp;'>
+	<label class="md-headline">Sign in</label>	
+	<div layout="row">	
+		<div><i class="material-icons" style='font-size:60px; color: rgba(0,175,178,1);'>account_box</i></div>
+		<form name="projectForm" style='width:80%; margin:auto; margin-top:10px' id="login_form">	
+			<md-input-container style='margin:2 0' class="md-block">
+				<label>Email</label>
+				<input required type="email" md-no-asterisk name="login" ng-model="login.mail" id="login">
+			</md-input-container>
+			<div layout="row" >
+				<md-input-container flex style='margin:2 0' class="md-block style='padding-bottom:0px;">
+					<label>Password</label>
+					<input required md-no-asterisk autofocus="true" name="password" ng-model="login.pass" id="password"  type="password" />
+				</md-input-container>
+				<md-button ng-click="loginctrl()" type="submit" id="login_role"  style='color:rgba(255,255,255,0.92); background-color:rgba(10,47,94,1); height:40px; margin-top:10px; margin-right:0px;'>LOGIN</md-button>
+			</div>
+		</form>   
+	</div>
+	<div>
+		<md-divider></md-divider>
+		<p style="text-align:center; margin:10px">New to our website ?</p>
+		<md-button style='width:100%; margin-left:0px;'  ng-click="signup()" class="md-raised">Sign Up</md-button>
+	</div>
+</md-content>

@@ -1,0 +1,22 @@
+<md-content id="register">
+	<div class="md-toolbar-tools" style='padding:0px;'>
+		<md-toolbar class="md-hue-2" style='padding:0px;' >
+			<label style='margin:auto;'>Create your account</label>
+		</md-toolbar>
+	</div>
+	<div style='padding:30px;'>
+		<md-input-container class="md-block">
+			<label>Mail</label>
+				<input required type="email" md-no-asterisk name="login" ng-model="reg.login" id="login" />
+			  </md-input-container>
+			  <md-input-container class="md-block">
+				<label>Password</label>
+				<input required md-no-asterisk type="password" name="password" ng-model="reg.pass" id="password" />
+			  </md-input-container>
+			  <md-input-container class="md-block">
+				<label ng-style="{'color': testmdp1}">Password Confirmation</label>
+				<input required md-no-asterisk ng-style="{'border-color': testmdp1}" type="password" ng-model="reg.confirmpassword" name="confpassword" id="confpassword" ng-model="reg.confpass"/>
+			  </md-input-container>
+        <md-button type="submit" ng-click="register()" id="register_button" style='margin:auto; color:rgba(255,255,255,0.92); background-color:rgba(10,47,94,1);'>Register</md-button>
+	</div>
+</md-content>
