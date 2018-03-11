@@ -3,6 +3,14 @@ FROM node:boron
 # Create app directory
 WORKDIR /etc/tickets
 
+RUN apt-get update && apt-get install -y \
+bc \
+nano \
+grep \
+wget \
+mysql-client \
+paxctl && paxctl -cm `which node`
+
 # Install app dependencies
 COPY package.json .
 
